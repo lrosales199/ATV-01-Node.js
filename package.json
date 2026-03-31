@@ -1,0 +1,26 @@
+{
+  "name": "atv-01-node",
+  "version": "1.0.0",
+  "description": "Atividade de Node.js/Express",
+  "homepage": "https://github.com/lrosales199/ATV-01-Node.js#readme",
+  "bugs": {
+    "url": "https://github.com/lrosales199/ATV-01-Node.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrosales199/ATV-01-Node.js.git"
+  },
+  "license": "ISC",
+  "author": "Leoanrdo Rosa Sales",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
