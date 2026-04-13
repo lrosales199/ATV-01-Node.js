@@ -1,5 +1,20 @@
-const express = require("express");
+import express from "express";
+
+import PerfilController from "./controllers/PerfilController.js";
+
+import TabelaController from "./controllers/TabelaController.js";
+
+import CardController from "./controllers/CardController.js";
+
 const app = express();
+
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+
+app.use("/", PerfilController);
+app.use("/", TabelaController);
+app.use("/", CardController);
 
 const port = 8080;
 app.listen(port, (error) => {
@@ -12,12 +27,6 @@ app.listen(port, (error) => {
   }
 });
 
-app.set("view engine", "ejs");
-
 app.get("/", function (req, res) {
   res.render("index");
-});
-
-app.get("/perfil", function (req, res) {
-  res.render("perfil");
 });
